@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Youtube Download
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='http://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', href='/node_modules/materialize-css/dist/css/materialize.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type="text/javascript", src="/node_modules/jquery/dist/jquery.min.js")
+    script(type="text/javascript", src="/node_modules/materialize-css/dist/js/materialize.min.js")
+  body
+    nav
+      .nav-wrapper 
+        .brand-logo.center Youtube Download
+    nav
+      .nav-wrapper 
+        form(action="/search", method="post")
+          .input-field
+            input(name="searchTxt", value="lata", required='')
+            label(for='search')
+              i.material-icons search
+            i.material-icons close      
+    div.body-content    
+      block content

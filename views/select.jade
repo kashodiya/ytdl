@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Select song to download
+  each img in imgList
+    a(href="download?url=" + img.videoUrl)
+      img(src=img.url)

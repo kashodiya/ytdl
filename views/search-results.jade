@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  each item in results.items
+    .row
+      .col.s12.m7
+        .card
+          .card-image
+            img(src=item.snippet.thumbnails.default.url)
+            span.card-title Card Title
+          .card-content
+            p
+              | item.snippet.title
+              | I am convenient because I require little markup to use effectively.
+          .card-action
+            a(href="download-video?id=" + item.id.videoId) Download
